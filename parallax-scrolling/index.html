@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Scrolling</title>
+</head>
+<body>
+    <section class="contents">
+        <nav class="navigation">
+            <h1 class="logo"><a href="#one">Roomy.Co</a></h1>
+            <ul class="menu">
+                <li><a href="#two" class="shopNow navShop">SHOP</a></li>
+                <li><a href="#three" class="whyRoomy">WHY ROOMY?</a></li>
+                <li><a href="#four" class="contactUs">CONTACT US</a></li>
+            </ul>
+        </nav>
+        
+    </section>    
+    <section class="background">
+        <div id="one" class="image1" dir="ltr">
+            <h1 class="slogan1">Re-imagine your room.</h1>
+            <h1 class="slogan2">Make your room green and spacious &<br> feel good being inside.</h1>
+            <a href="#two"><button class="shopNow btn">SHOP NOW</button></a>
+        </div>
+        <div id="two" class="image2" dir="ltr">
+            <button class="shopNow btn"><a href="#two">SHOP NOW</a></button>
+            <div class="shop">
+                <ul class="items">
+                    <li>
+                        <img src="img/lights.jpg" alt="chairs"/> 
+                        <h2>Lights & Lamps </h2>                       
+                    </li>
+                    <li class="evenItem">
+                        <h2>Tables</h2>   
+                        <img src="img/table.jpg" alt="lights"/>                        
+                    </li>
+                    <li>
+                        <img src="img/plants.jpg" alt="plants"/> 
+                        <h2>Plants & Ornaments</h2>                         
+                    </li>
+                    <li class="evenItem">
+                        <h2>Sofas & Chairs</h2>  
+                        <img src="img/chair.jpg" alt="tables" />                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="three" class="image3" dir="ltr">
+            <a href="#two"><button class="shopNow btn">SHOP NOW</button></a>
+            <ul class="adWords">
+            </ul>
+            <div class="contact">
+                <a href="#four"><h3>Any Questions?</h3></a>
+            </div>
+        </div>
+        <div id="four" class="image4" dir="ltr">
+            
+            <form>
+                <div class="contactForm">
+                    <h6>Call us on  +00 111 222 333 <br> Between Mon - Fri 8.30am to 6pm EST.  <br>or</h6>
+                    <h4>Ask us a question down here.</h4>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your enquiry" required></textarea>
+                    <button>Send</button>
+                </div>                
+            </form> 
+            <div class="footer">
+                <a href="#one"><p>Roomy.co</p></a>
+                <small>Website powered by <a href="https://www.kate-kim.com" target="_blank"><em>kate-kim.com</em></a></small>
+            </div>
+                 
+        </div>
+    </section>   
+
+
+    <script src="app.js"></script>
+    
+
+   
+   
+</body>
+</html>
