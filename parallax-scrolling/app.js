@@ -25,12 +25,7 @@ input.nextElementSibling.value = '';
 
 // on logo click, back to the screen 1 and initialize the rest
 logo.addEventListener('click', () => {
-    for(let nav of chooseNavi) {
-        if(nav.className) {
-            nav.classList.remove('choose');
-            nav.firstElementChild.classList.remove('choose');
-        }
-    }
+  
     shop.style.display = 'none';  
     for(let btn of shopNav) {
         btn.classList.remove('disappear')
@@ -46,73 +41,10 @@ for(let i = 0; i < shopNav.length; i++) {
         if((!shopButton.classList.contains('disappear'))) {
             for(let btn of shopBtn) {
                 btn.classList.add('disappear');
-                shopNav[0].classList.add('choose')
+                // shopNav[0].classList.add('choose')
             }            
         }           
     })
-}
-
-// Show & remove underline on the menu upon selecting the item
-
-for(let i = 0 ; i < chooseNavi.length; i++) {
-    let choice = chooseNavi[i];   
-
-    choice.addEventListener('click', (e) => {
-        if(choice.contains(e.target)) {
-            choice.classList.add('choose');
-            let prevSibling = choice.previousElementSibling;
-            let nextSibling = choice.nextElementSibling;
-            removeClass(prevSibling)
-            removeClass(nextSibling)
-            if(i === 0) {
-                removeClass(nextSibling.nextElementSibling);
-                removeClass(nextSibling.parentElement);
-            }
-            shopNav[0].classList.remove('choose');
-
-           
-            if(i === 2) {
-                removeClass(prevSibling.previousElementSibling);
-                removeClass(prevSibling.parentElement)
-            }           
-        }        
-
-        function removeClass(sibling) {
-            if(sibling && sibling.classList.contains('choose')) {
-                sibling.classList.remove('choose')
-            }            
-        }
-    })       
-}
-
-// scrolling enables underline switches for the nav options
-
-window.addEventListener('scroll', function() {
-    if(scrollY < 100) {
-        shopBtn[0].style.display = 'block';
-        chooseNavi[0].firstElementChild.classList.remove('choose');
-    }   
-
-    if(scrollY > 540 && scrollY < 1250 ) {
-        shopNav[0].classList.add('choose');
-        whyRoomy.classList.remove('choose');
-    }
-    if(scrollY > 850 && scrollY < 2500) {
-        shopNav[0].classList.remove('choose');
-        whyRoomy.classList.add('choose');
-        chooseControl(contactUs);
-    }
-    if(scrollY > 2500) {
-        shopNav[0].classList.remove('choose')
-        shopNav[0].parentElement.classList.remove('choose')
-        contactUs.classList.add('choose');
-        chooseControl(whyRoomy);
-    }
-})
-
-function chooseControl(sibling) {
-    sibling.classList.remove('choose');
-    sibling.parentElement.classList.remove('choose');
 }
 
 // ad words options in an array format
